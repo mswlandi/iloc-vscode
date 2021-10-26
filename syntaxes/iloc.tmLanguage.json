@@ -6,26 +6,62 @@
 			"include": "#keywords"
 		},
 		{
-			"include": "#strings"
+			"include": "#labels"
+		},
+		{
+			"include": "#arrows"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#registers"
+		},
+		{
+			"include": "#linecomments"
 		}
 	],
 	"repository": {
+		"linecomments": {
+			"name": "linecomment.comment",
+			"patterns": [{
+				"name": "comment.iloc",
+				"match": "//(.)*"
+			}]
+		},
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.iloc",
-				"match": "\\b(if|while|for|return)\\b"
+				"match": "\\b(nop|loadI|load|cload|store|cstore|i2i|c2i|c2c|i2c|add|sub|mult|div|addI|subI|rsubI|multI|divI|rdivI|lshift|lshiftI|rshift|rshiftI|and|andI|or|orI|xor|xorI|loadAI|loadA0|cloadAI|cloadA0|storeAI|storeAO|cstoreAI|cstoreAO|jumpI|jump|cmp_LT|cmp_LE|cmp_EQ|cmp_GE|cmp_GT|cmp_NE|cbr)\\b"
 			}]
 		},
-		"strings": {
-			"name": "string.quoted.double.iloc",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.iloc",
-					"match": "\\\\."
-				}
-			]
+		"labels": {
+			"name": "labels.invalid",
+			"patterns": [{
+				"name": "invalid.iloc",
+				"match": "L(\\d)+:?"
+			}]
+		},
+		"arrows": {
+			"name": "arrows.constant.operator",
+			"patterns": [{
+				"name": "constant.operator.iloc",
+				"match": "(=|-)>"
+			}]
+		},
+		"registers": {
+			"name": "register.storage",
+			"patterns": [{
+				"name": "storage.iloc",
+				"match": "r(\\d|\\w|-)+"
+			}]
+		},
+		"constants": {
+			"name": "constants.constant.numeric",
+			"patterns": [{
+				"name": "constant.numeric.iloc",
+				"match": "(\\d)+"
+			}]
 		}
 	},
 	"scopeName": "source.iloc"
