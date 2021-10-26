@@ -1,0 +1,25 @@
+{
+    "name": "iloc",
+    "displayName": "ILOC",
+    "description": "syntax highlight for the RISC linear assembly code language ILOC",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.61.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "iloc",
+            "aliases": ["iloc", "iloc"],
+            "extensions": ["iloc"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "iloc",
+            "scopeName": "source.iloc",
+            "path": "./syntaxes/iloc.tmLanguage.json"
+        }]
+    }
+}
