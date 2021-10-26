@@ -1,14 +1,33 @@
 {
     "name": "iloc",
-    "displayName": "ILOC",
+    "publisher": "mswlandi",
+    "author": {
+        "name": "Marcos Landi",
+        "email": "marcoswinkellandi@gmail.com"
+    },
+    "bugs": {
+        "url": "https://github.com/mswlandi/iloc-vscode/issues",
+        "email": "marcoswinkellandi@gmail.com"
+    },
+    "displayName": "ILOC Language",
     "description": "syntax highlight for the RISC linear assembly code language ILOC",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.61.0"
     },
+    "livense": "MIT",
     "categories": [
         "Programming Languages"
     ],
+    "keywords": [
+        "language",
+        "grammar",
+        "iloc",
+        "compiladores",
+        "compilers",
+        "ufrgs"
+    ],
+    "icon": "images/icon.png",
     "contributes": {
         "languages": [{
             "id": "iloc",
@@ -21,5 +40,9 @@
             "scopeName": "source.iloc",
             "path": "./syntaxes/iloc.tmLanguage.json"
         }]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mswlandi/iloc-vscode.git"
     }
 }
